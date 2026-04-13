@@ -14,3 +14,8 @@ const sortedBands = bands.sort((a, b)
 							  => strip(a) > strip(b) ? 1 : -1);
 
 }
+document.querySelecto
+r('#band').innerHTML
+=
+	sortedBands.map(band => '<li>${band}
+		</li>').join('');
