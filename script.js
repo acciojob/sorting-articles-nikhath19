@@ -11,9 +11,9 @@ function strip(bandName) {
 							the )/i, '').trim();
 }
 const sortedBands = bands.sort((a, b)
-							  => strip(a) > strip(b) ? 1 : -1);
+ => strip(a) > strip(b) ? 1 : -1);
 
 }
 document.querySelector('#band').innerHTML =
-	sortedBands.map(band => '<li>${band}</li>').join('');
+	sortedBands.map(band => `<li>${band}</li>`).join('');
 
