@@ -1,13 +1,13 @@
 const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
 
-// Article ignore karne ka function
 function strip(bandName) {
+  // 'a', 'an', 'the' ko ignore karne ke liye regex
   return bandName.replace(/^(a |an |the )/i, '').trim();
 }
 
 // Sorting logic
 const sortedBands = bands.sort((a, b) => strip(a) > strip(b) ? 1 : -1);
 
-// HTML mein display karna
-document.querySelector('#bands').innerHTML = 
+// Display logic (id 'band' use kiya hai)
+document.querySelector('#band').innerHTML = 
   sortedBands.map(band => <li>${band}</li>).join('');
